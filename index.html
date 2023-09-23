@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Betacrypt </title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fontawesome Icons -->
+<link
+        rel="stylesheet"
+        href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"
+      >
+  </head>
+  <body>
+  	
+  	<div class="header">
+  	  <button class="button-icon" id="back-btn" onclick="chooserM()"><i class="fas fa-arrow-left"></i></button>
+  	  <h1>BETACRYPT</h1>
+  	</div>
+  
+  <div class="wrapper chooser">
+  	<button class="button-large" onclick="encryptionM()" style="margin-bottom: 25px">ENCRYPTION</button>
+      <button class="button-large" onclick="decryptionM()">DECRYPTION</button>
+  	</div>
+  
+    <div class="wrapper encrypt">
+       <div class="typing-textarea" style="margin-bottom: 20px;">
+          <textarea id="text-in" spellcheck="true" placeholder="ORIGINAL TEXT" required></textarea>
+          <span onclick="pasteEnc()" id="enc-paste-btn"><i class="far fa-clipboard"></i></span>
+        </div>
+      <div class="enckey-box">
+        <input type="text" id="enckey-in-enc" placeholder="ENCKEY" required />
+      </div>
+      <button class="button-large" onclick="encrypt()" style="margin-bottom: 20px; margin-top: 20px;">ENCRYPT</button>
+      <div class="typing-textarea">
+          <textarea id="encrypted-out" placeholder="ENCRYPTED TEXT" disabled></textarea>
+          <span id="enc-copy-btn" onclick="copyEnc()"><i class="far fa-copy"></i></span>
+        </div>
+    </div>
+    
+        <div class="wrapper decrypt">
+       <div class="typing-textarea" style="margin-bottom: 20px;">
+          <textarea id="encrypted-in" spellcheck="true" placeholder="ENCRYPTED TEXT" required></textarea>
+          <span id="dec-paste-btn" onclick="pasteDec()"><i class="far fa-clipboard"></i></span>
+        </div>
+      <div class="enckey-box">
+        <input type="text" id="enckey-in-dec" placeholder="ENCKEY" required />
+      </div>
+      <button class="button-large" onclick="decrypt()" style="margin-bottom: 20px; margin-top: 20px;">DECRYPT</button>
+      <div class="typing-textarea">
+          <textarea id="decrypted-out" placeholder="DECRYPTED TEXT" disabled></textarea>
+          <span id="dec-copy-btn" onclick="copyDec()"><i class="far fa-copy"></i></span>
+        </div>
+    </div>
+    
+      <div class="footer">
+  	  <span>&copy; 2023, Wetland Services</span>
+  	</div>
+    
+    <!-- Javascript -->
+    <script src="btc.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
