@@ -58,7 +58,7 @@ body {
 	
 .wrapper {
   position: relative;
-  margin-top: 20px;
+  margin-top: 10px;
   max-width: 360px;
   width: 100%;
   background: var(--color-box);
